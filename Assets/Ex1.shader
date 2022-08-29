@@ -3,13 +3,6 @@ Shader "Unlit/Ex1"
     Properties
     {
         _MainTex ("Texture", 2D) = "black" {}
-        _MainTex1 ("Texture 2", 2D) = "black" {}
-        _MainTex2 ("Texture 3", 2D) = "black" {}
-        _MainTex3 ("Texture 4", 2D) = "black" {}
-        _MainTex4 ("Texture 5", 2D) = "black" {}
-        _MainTex5 ("Texture 6", 2D) = "black" {}
-        _MainTex6 ("Texture 7", 2D) = "black" {}
-        _MainTex7 ("Texture 8", 2D) = "black" {}
         _Rotation ("Rotation", float) = 0
     }
     SubShader
@@ -47,21 +40,7 @@ Shader "Unlit/Ex1"
             };
 
             sampler2D _MainTex;
-            sampler2D _MainTex1;
-            sampler2D _MainTex2;
-            sampler2D _MainTex3;
-            sampler2D _MainTex4;
-            sampler2D _MainTex5;
-            sampler2D _MainTex6;
-            sampler2D _MainTex7;
             float4 _MainTex_ST;
-            float4 _MainTex1_ST;
-            float4 _MainTex2_ST;
-            float4 _MainTex3_ST;
-            float4 _MainTex4_ST;
-            float4 _MainTex5_ST;
-            float4 _MainTex6_ST;
-            float4 _MainTex7_ST;
             float _Rotation;
 
             float2 RotateMat(float2 uv, float t) {
