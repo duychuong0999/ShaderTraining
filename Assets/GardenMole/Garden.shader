@@ -37,11 +37,11 @@ Shader "Unlit/Garden"
             v2f vert (appdata v)
             {
                 v2f o;
+                v.vertex.xz += sin(_Time.y * 3) * v.uv * v.vertex.y;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.color = v.color;
-                if(v.vertex.y > 0) {
-                    o.vertex.xy += sin(_Time.y) * v.uv;
-                }
+  
+
                 return o;
             }
 

@@ -106,6 +106,7 @@ public class Ex3 : MonoBehaviour
         mesh.vertices = verticles;
         mesh.triangles = triangle;
         mesh.normals = normal;
+        mesh.RecalculateNormals();
         GetComponent<MeshFilter>().sharedMesh = mesh;
     }
 }

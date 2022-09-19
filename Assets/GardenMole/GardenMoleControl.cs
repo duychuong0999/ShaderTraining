@@ -24,7 +24,7 @@ public class GardenMoleControl : MonoBehaviour
                 {
                     verticle.Add(mesh.vertices[k] + new Vector3(i * radius, 0, j * radius));
                     color.Add(image.GetPixel(i * 4, j * 4));
-                    newPoint.Add(new Vector2(Random.Range(-0.04f, 0.04f), 0));
+                    newPoint.Add(new Vector2(Random.Range(-0.1f, 0.1f), 0));
                 }
                 for (int k = 0; k < mesh.triangles.Length; k++)
                 {
