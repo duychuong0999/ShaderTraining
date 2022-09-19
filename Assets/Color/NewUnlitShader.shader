@@ -50,7 +50,7 @@ Shader "Unlit/NewUnlitShader"
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
                 fixed4 col2 = tex2D(_MainTex2, i.uv2);
-                return 2 * col- col2;
+                return col + (col2 - col * 2) * col2;
             }
             ENDCG
         }
