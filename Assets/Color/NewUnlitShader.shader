@@ -41,7 +41,7 @@ Shader "Unlit/NewUnlitShader"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = float2(_Time.x * 4, 0);
+                o.uv = float2(_Time.x * 2, 0);
                 o.uv2 = v.uv;
                 return o;
             }
@@ -50,7 +50,7 @@ Shader "Unlit/NewUnlitShader"
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
                 fixed4 col2 = tex2D(_MainTex2, i.uv2);
-                return col + (col2 - col * 2) * col2;
+                return col * col2 + (1 - col) * (1 - col2);
             }
             ENDCG
         }
