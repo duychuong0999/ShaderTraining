@@ -44,14 +44,15 @@ Shader "Unlit/Water"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = (v.uv  + float2(_Time.y * 0.01f * _Speed,0)) * float2(_TilingX, _TilingY);
+                o.uv = ((v.uv  + float2(_Time.y * 0.01f * _Speed,0)) * float2(_TilingX, _TilingY)) ;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
-                return (col + 4) / 5 * _Color;
+
+                return (col + 2) / 3 * _Color;
             }
             ENDCG
         }
